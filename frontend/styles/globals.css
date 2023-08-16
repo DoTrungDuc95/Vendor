@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f6f6f5];
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  .flex-type-1 {
+    @apply flex items-center;
+  }
+
+  .section {
+    @apply w-11/12 mx-auto;
+  }
+
+  .custom-container {
+    @apply w-11/12 hidden sm:block;
+  }
+}
+
+@layer components {
+  .batch-heart {
+    @apply bg-[tomato] w-[15px] aspect-square flex justify-center items-center rounded-full cursor-pointer;
+  }
+
+  .form-error {
+    @apply text-[13px] font-medium text-red-600 mt-[-2px];
+  }
+
+  .heading {
+    @apply text-[1.6875rem] text-center md:text-start font-[700] pb-[1.25rem];
+  }
+
+  .product-title {
+    @apply text-[1.5625rem] font-[700] text-[#333];
+  }
+
+  .product-discount-price {
+    @apply font-bold text-[1.125rem] text-[#333];
+  }
+
+  .price {
+    @apply font-[500] text-[1rem] text-[#d55b45] pl-3 mt-[-4px] line-through;
+  }
+
+  .shop-name {
+    @apply pt-3 text-[0.9375rem] text-blue-400 pb-3;
+  }
+
+  .active-indicator {
+    @apply absolute bottom-[-27%] left-0 h-[3px] w-full bg-[crimson];
+  }
+
+  .btn {
+    @apply w-[150px] bg-black h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer;
+  }
+
+  .cart-btn {
+    @apply px-[20px] h-[38px] rounded-[20px] bg-[#f63b60] flex items-center justify-center cursor-pointer;
+  }
+
+  .cart-btn-text {
+    @apply text-[#fff] text-[1rem] font-[700];
+  }
+
+  .submit-btn {
+    @apply w-full text-white font-bold py-2 bg-blue-700 hover:bg-blue-600 transition-all duration-200 disabled:bg-blue-400;
+  }
+
+  .input {
+    @apply w-full border p-1 rounded-[5px];
+  }
+
+  .active-status {
+    @apply w-[10px] h-[10px] rounded-full absolute top-0 right-1 bg-[#40d132];
+  }
+}
